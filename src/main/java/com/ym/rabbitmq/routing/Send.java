@@ -18,7 +18,7 @@ public class Send {
         Connection connecction = ConnectionUtils.getConnecction();
         //获取通道
         Channel channel = connecction.createChannel();
-        //声明交换机
+        //声明交换机,类型为direct
         channel.exchangeDeclare(EXCHANGER_NAME,"direct");
         //发送消息
         String msg = "hello routing";
